@@ -1,4 +1,4 @@
-image: gableroux/unity3d:2019.1.14f1
+image: gableroux/unity3d:2019.2.5f1
 
 stages:
   - build_and_test
@@ -30,7 +30,7 @@ get-license:
 get-android-license:
   when: manual
   stage: build_and_test
-  image: gableroux/unity3d:2019.1.14f1-android
+  image: gableroux/unity3d:2019.2.5f1-android
   <<: *cache
   script:
     - chmod +x ./ci/get_license.sh && ./ci/get_license.sh
@@ -91,7 +91,7 @@ build-WebGL:
     
 build-android:
   <<: *build
-  image: gableroux/unity3d:2019.1.14f1-android
+  image: gableroux/unity3d:2019.2.5f1-android
   variables:
     BUILD_TARGET: Android
 
