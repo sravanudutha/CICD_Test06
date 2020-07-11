@@ -1,8 +1,6 @@
 name: Actions 😎
 
-on:
-
-  push: 
+on:[push]
 
 
 image: gableroux/unity3d:2019.3.7f1
